@@ -19,17 +19,7 @@ namespace RemoteAttributeInArea
         {
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
-            app.UseMvc(
-                routes =>
-                {
-                    routes.MapRoute(
-                        "areaRoute",
-                        "{area:exists}/{controller}/{action}",
-                        new { controller = "Home", action = "Index" });
-                    routes.MapRoute(
-                        name: "default",
-                        template: "{controller=Home}/{action=Index}/{id?}");
-                });
+            app.UseMvc();
         }
 
         public static void Main(string[] args)

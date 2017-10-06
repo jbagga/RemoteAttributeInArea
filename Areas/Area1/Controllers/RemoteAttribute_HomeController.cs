@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 namespace RemoteAttributeInArea
 {
     [Area("Area1")]
-    [Route("[area]/[controller]/[action]")]
+    [Route("FormArea")]
     public class RemoteAttribute_HomeController : Controller
     {
         private static RemoteAttributeUser _user;
 
         [HttpGet]
+        [Route("AreaAction")]
         public IActionResult Create()
         {
             return View();

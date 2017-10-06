@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace RemoteAttributeInArea
 {
     [Area("Area1")]
-    [Route("[area]/[controller]/[action]")]
+    [Route("FormArea")]
     public class RemoteAttribute_VerifyController : Controller
     {
         [AcceptVerbs("Get", "Post")]
