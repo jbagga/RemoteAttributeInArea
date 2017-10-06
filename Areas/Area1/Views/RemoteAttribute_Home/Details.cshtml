@@ -1,0 +1,38 @@
+﻿@model RemoteAttributeInArea.RemoteAttributeUser
+@{
+    Layout = "_Layout.cshtml";
+    object areaName;
+    ViewContext.RouteData.Values.TryGetValue("area", out areaName);
+    areaName = areaName ?? "root";
+    ViewBag.Title = "Details in " + areaName + " area.";
+}
+
+<h2>@ViewBag.Title</h2>
+<div>
+    <h4>Person</h4>
+    <hr />
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+    </dl>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UserEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserEmail)
+        </dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Create a new one", "Create")
+</p>
