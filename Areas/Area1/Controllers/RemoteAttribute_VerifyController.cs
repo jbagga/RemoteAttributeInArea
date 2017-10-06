@@ -7,7 +7,7 @@ namespace RemoteAttributeInArea
     public class RemoteAttribute_VerifyController : Controller
     {
         [AcceptVerbs("Get", "Post")]
-        public IActionResult IsEmailAvailable(string userId1, string userId3)
+        public IActionResult IsEmailAvailable(string userEmail)
         {
             return Json(data: false);
         }
