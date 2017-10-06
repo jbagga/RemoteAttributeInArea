@@ -15,7 +15,7 @@ namespace RemoteAttributeInArea
             action: "IsEmailAvailable",
             controller: "RemoteAttribute_Verify",
             areaName: "Area1",
-            ErrorMessage = "/Area1/RemoteAttribute_Verify/IsIdAvailable rejects you.")]
+            ErrorMessage = "/Area1/RemoteAttribute_Verify/IsEmailAvailable rejects you.")]
         public string UserEmail { get; set; }
     }
 }
